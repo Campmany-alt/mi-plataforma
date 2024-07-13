@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Profesionales</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">MiPlataforma</div>
+        <nav class="horizontal-nav">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Marketplace</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="privacy_policy.html">Política de Privacidad</a></li>
+                <li><a href="terms_conditions.html">Términos y Condiciones</a></li>
+                <li>
+                    <select id="language-selector">
+                        <option value="es">Español</option>
+                        <option value="en">Inglés</option>
+                        <option value="de">Alemán</option>
+                        <option value="fr">Francés</option>
+                    </select>
+                </li>
+                <li><button id="google-login">Login con Google</button></li>
+            </ul>
+        </nav>
+    </header>
+    <aside class="vertical-nav">
+        <ul>
+            <li><a href="#">Marketplace</a></li>
+            <li><a href="#">Servicios</a></li>
+        </ul>
+    </aside>
+    <main>
+        <section class="registration-form">
+            <h1>Registro de Profesionales</h1>
+            <form id="registration-form">
+                <label for="profile-picture">Foto de Perfil</label>
+                <input type="file" id="profile-picture" name="profile-picture" accept="image/*">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required>
+                <label for="profession">Profesión</label>
+                <input type="text" id="profession" name="profession" required>
+                <label for="education">Formación</label>
+                <input type="text" id="education" name="education" required>
+                <label for="contact">Datos de Contacto</label>
+                <input type="text" id="contact" name="contact" required>
+                <label for="country">País</label>
+                <input type="text" id="country" name="country" required>
+                <label for="province">Provincia</label>
+                <input type="text" id="province" name="province" required>
+                <label for="city">Localidad</label>
+                <input type="text" id="city" name="city" required>
+                <label for="address">Dirección</label>
+                <input type="text" id="address" name="address" required>
+                <button type="submit">Registro Gratuito</button>
+                <button type="button" id="subscribe-button">Suscripción Mensual</button>
+            </form>
+        </section>
+        <section class="search-and-filters">
+            <h1>Buscar Profesionales o Servicios</h1>
+            <input type="text" id="search-bar" placeholder="¿Quién me puede ayudar a arreglar el coche?">
+            <div class="filters">
+                <label for="sort-by">Ordenar por</label>
+                <select id="sort-by">
+                    <option value="best-rated">Mejor valorados</option>
+                    <option value="price-low-high">De menor a mayor precio</option>
+                    <option value="price-high-low">De mayor a menor precio</option>
+                </select>
+            </div>
+            <div id="search-results">
+                <!-- Resultados de la búsqueda aparecerán aquí -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 MiPlataforma. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

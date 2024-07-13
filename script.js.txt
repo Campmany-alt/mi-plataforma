@@ -1,0 +1,47 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const googleLoginButton = document.getElementById('google-login');
+    const subscribeButton = document.getElementById('subscribe-button');
+    const registrationForm = document.getElementById('registration-form');
+    const searchBar = document.getElementById('search-bar');
+    const searchResults = document.getElementById('search-results');
+
+    googleLoginButton.addEventListener('click', function () {
+        // Implementación de la autenticación con Google
+        alert('Login con Google no implementado aún.');
+    });
+
+    subscribeButton.addEventListener('click', function () {
+        // Redirigir a la página de suscripción
+        alert('Redirigiendo a la página de suscripción.');
+    });
+
+    registrationForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        // Procesar el registro del usuario
+        alert('Formulario de registro enviado.');
+    });
+
+    searchBar.addEventListener('input', function () {
+        const query = searchBar.value.toLowerCase();
+        // Simulación de resultados de búsqueda
+        const results = [
+            { name: 'Mecánico Juan', profession: 'Mecánico', location: 'Madrid', rating: 4.5 },
+            { name: 'Taller Pepito', profession: 'Taller de Coches', location: 'Barcelona', rating: 4.0 },
+            // Agregar más resultados simulados aquí
+        ];
+
+        const filteredResults = results.filter(result => result.name.toLowerCase().includes(query) || result.profession.toLowerCase().includes(query));
+
+        searchResults.innerHTML = '';
+        filteredResults.forEach(result => {
+            const resultDiv = document.createElement('div');
+            resultDiv.classList.add('search-result');
+            resultDiv.innerHTML = `
+                <h3>${result.name}</h3>
+                <p>${result.profession} - ${result.location}</p>
+                <p>Valoración: ${result.rating}</p>
+            `;
+            searchResults.appendChild(resultDiv);
+        });
+    });
+});
